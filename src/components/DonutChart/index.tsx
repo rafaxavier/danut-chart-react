@@ -51,7 +51,7 @@ const DonutChart: React.FC<DonutChartProps> = ({ data }) => {
   }, [data]);
 
   return (
-    <Box p={5} m={5} sx={{width:'100%', border:'1px solid red'}}>
+    <Box sx={{height:'350px', border:'1px solid black'}}>
       <canvas ref={canvasRef} width={350} height={350} />
     </Box>
   );
