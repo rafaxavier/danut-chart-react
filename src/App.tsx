@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import DonutChart from './components/DonutChart';
 import DonutChartGoogle from './components/DonutChartGoogle';
+import DonutLibChart from './components/DonutLibChart';
 
 const chartData = [
   { label:"Faltas insjustificadas", value: 300, color: '#0099c6' },
@@ -26,11 +27,14 @@ const chartData2 = [
 function App() {
   return (
     <Box sx={{display:'flex'}}>
-      <Box sx={{width:'50%'}}>
+      <Box sx={{width:'33%'}}>
         <DonutChart data={chartData} />
       </Box>
-      <Box sx={{width:'50%'}}>
+      <Box sx={{width:'34%'}}>
         <DonutChartGoogle dados={chartData2} />
+      </Box>
+      <Box sx={{width:'33%'}}>
+        <DonutLibChart dados={chartData} />
       </Box>
     </Box>
   );
