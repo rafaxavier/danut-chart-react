@@ -34,7 +34,7 @@ const DonutChart: React.FC<DonutChartProps> = ({ data }) => {
         const x = canvas.width / 2 + Math.cos(midAngle) * textRadius;
         const y = canvas.height / 2 + Math.sin(midAngle) * textRadius;
         ctx.fillStyle = "grey";
-        ctx.font = "600 14px Arial";
+        ctx.font = "400 14px Arial";
         ctx.fillText(label, x - ctx.measureText(label).width / 2, y - 15);
         ctx.fillText(value.toString(), x - ctx.measureText(value.toString()).width / 2, y, 20);
       
@@ -51,7 +51,7 @@ const DonutChart: React.FC<DonutChartProps> = ({ data }) => {
   }, [data]);
 
   return (
-    <Box sx={{height:'350px', border:'1px solid black'}}>
+    <Box m={2} p={2} sx={{height:'350px', border:'1px solid black'}}>
       <canvas ref={canvasRef} width={350} height={350} />
     </Box>
   );
