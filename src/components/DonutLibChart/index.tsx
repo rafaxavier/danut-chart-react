@@ -14,7 +14,7 @@ const DonutLibChart: React.FC<DonutLibChartProps> = ({ dados }) => {
       const chartInstance = new Chart(chartRef.current, {
         type: "doughnut",
         data: {
-          labels: dados.map(d => d.label),
+          labels: dados.map(d => d.value+' - '+d.label),
           
           datasets: [
             {
@@ -59,7 +59,7 @@ const DonutLibChart: React.FC<DonutLibChartProps> = ({ dados }) => {
   }, [dados]);
 
   return (
-    <Box sx={{border:'1px solid black', height:'350px', }}>
+    <Box  m={2} p={2} sx={{border:'1px solid black', height:'350px', }}>
       <canvas ref={chartRef}  />
     </Box>
   );
