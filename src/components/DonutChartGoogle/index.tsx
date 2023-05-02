@@ -13,7 +13,7 @@ const DonutChartGoogle: React.FC<DonutChartGoogleProps> = ({ dados }) => {
   }
 
   const options = {
-    title: "My Daily Activities",
+    title: "Meu título",
     pieHole: 0.5,
     is3D: false,
     pieSliceText: "none",
@@ -28,7 +28,7 @@ const DonutChartGoogle: React.FC<DonutChartGoogleProps> = ({ dados }) => {
   };
 
   return (
-    <Box sx={{border:'1px solid black', height:'350px', }}>
+    <Box  m={2} p={2} sx={{border:'1px solid black', height:'350px'}}>
       <Chart
       chartType="PieChart"
       width="100%"
