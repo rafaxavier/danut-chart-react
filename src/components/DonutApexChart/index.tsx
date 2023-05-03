@@ -11,6 +11,9 @@ const DonutApexChart: React.FC<DonutApexChartProps> = ({ data }) => {
   const chartRef = useRef<HTMLDivElement>(null);
 
   const chartOptions: ApexOptions = {
+    title:{
+      text:'LIB APEX CHART',
+    },
     plotOptions: {
       pie: {
         expandOnClick: false,

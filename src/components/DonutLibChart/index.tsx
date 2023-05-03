@@ -47,7 +47,7 @@ const DonutLibChart: React.FC<DonutLibChartProps> = ({ dados }) => {
             title:{
               display:true,
               color:'#a2a',
-              text:'testeeeee'
+              text:'LIB CHART JS'
             }
           }
         },

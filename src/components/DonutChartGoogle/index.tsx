@@ -13,7 +13,7 @@ const DonutChartGoogle: React.FC<DonutChartGoogleProps> = ({ dados }) => {
   }
 
   const options = {
-    title: "Meu título",
+    title: "LIB GOOGLE CHART",
     pieHole: 0.5,
     is3D: false,
     pieSliceText: "none",
