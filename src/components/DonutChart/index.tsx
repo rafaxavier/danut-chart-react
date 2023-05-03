@@ -33,10 +33,10 @@ const DonutChart: React.FC<DonutChartProps> = ({ data }) => {
         const textRadius = canvas.height / 2.6;
         const x = canvas.width / 2 + Math.cos(midAngle) * textRadius;
         const y = canvas.height / 2 + Math.sin(midAngle) * textRadius;
-        ctx.fillStyle = "grey";
-        ctx.font = "400 14px Arial";
+        ctx.fillStyle = "black";
+        ctx.font = "600 25px Arial";
         ctx.fillText(label, x - ctx.measureText(label).width / 2, y - 15);
-        ctx.fillText(value.toString(), x - ctx.measureText(value.toString()).width / 2, y, 20);
+        ctx.fillText(value.toString(), x - ctx.measureText(value.toString()).width / 2, y+10, 50);
       
         startAngle = endAngle;
       });
@@ -51,8 +51,13 @@ const DonutChart: React.FC<DonutChartProps> = ({ data }) => {
   }, [data]);
 
   return (
-    <Box m={2} p={2} sx={{height:'350px', border:'1px solid black'}}>
-      <canvas ref={canvasRef} width={350} height={350} />
+    <Box m={2} p={2} sx={{ border: '1px solid black',minWidth:'320px', height: '350px', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', wordWrap: 'normal' }}>
+      <Box>
+        <canvas ref={canvasRef} width={640} height={640} style={{ width: '320px', height: '320px' }}/>
+      </Box>
+      <Box pl={5} sx={{ border: '1px solid black', minWidth: '150px', flexGrow: 1 }}>
+        SEM USO DE LIB
+      </Box>
     </Box>
   );
 };
