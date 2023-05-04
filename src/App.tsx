@@ -6,6 +6,7 @@ import DonutChartGoogle from './components/DonutChartGoogle';
 import DonutLibChart from './components/DonutLibChart';
 import DonutApexChart from './components/DonutApexChart';
 import DonutChartNivo from './components/DonutChartNivo';
+import LineChartNivo from './components/LineChartNivo';
 
 const chartData = [
   { label:"MARKETING", value: 300, color: '#2F5F98' },
@@ -69,6 +70,43 @@ const dataNivo = [
   }
 ];
 
+const dataLineNivo = [
+  {
+    "id": "japan",
+    "color": "hsl(212, 70%, 50%)",
+    "data": [
+      {
+        "x": "01/2023",
+        "y": 13
+      },
+      {
+        "x": "02/2023",
+        "y": 14
+      },
+      {
+        "x": "03/2023",
+        "y": 15
+      },
+      {
+        "x": "04/2023",
+        "y": 16
+      },
+      {
+        "x": "05/2023",
+        "y": 13
+      },
+      {
+        "x": "06/2023",
+        "y": 14
+      },
+      {
+        "x": "07/2023",
+        "y": 15
+      },
+    ]
+  },
+];
+
 function App() {
   return (
     <Box sx={{ minWidth:'600px',display: 'flex', flexDirection: 'row', flexWrap: 'wrap', wordWrap: 'normal' }}>
@@ -77,7 +115,7 @@ function App() {
           <DonutChartNivo dados={dataNivo} />
         </Box>
         <Box sx={{minWidth:'400px',width:'50%'}}>
-          <DonutChartGoogle dados={chartData2} />
+          <LineChartNivo dados={dataLineNivo} />
         </Box>
       </Box>
 
