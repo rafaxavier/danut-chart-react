@@ -9,7 +9,7 @@ interface DonutChartNivoProps {
 const DonutChartNivo: React.FC<DonutChartNivoProps> = ({ dados }) => {
 
   return (
-    <Box  m={2} p={2} sx={{border:'1px solid black', height:'350px'}}>
+    <Box  m={2} p={2} sx={{border:'1px solid black', height:'350px', minWidth:'500px'}}>
       {/* <ResponsivePie
         data={dados}
         margin={{ top: 100, right: 100, bottom: 100, left: 100 }}

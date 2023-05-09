@@ -9,10 +9,10 @@ interface LineChartNivoProps {
 const LineChartNivo: React.FC<LineChartNivoProps> = ({ dados = [] }) => {
 
   return (
-    <Box  m={2} p={2} sx={{border:'1px solid black', height:'350px'}}>
+    <Box  m={2} p={2} sx={{border:'1px solid black', height:'350px', minWidth:'500px'}}>
       <ResponsiveLine
         data={dados}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        margin={{ top: 50, right: 30, bottom: 50, left: 30 }}
         xScale={{ type: 'point' }}
         yScale={{
             type: 'linear',

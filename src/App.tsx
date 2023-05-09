@@ -9,21 +9,21 @@ import DonutChartNivo from './components/DonutChartNivo';
 import LineChartNivo from './components/LineChartNivo';
 
 const chartData = [
-  { label:"MARKETING", value: 300, color: '#2F5F98' },
-  { label:"COMERCIAL", value: 500, color: '#2D8BBA' },
-  { label:"FINANCEIRO", value: 200, color: '#41B8D5' },
-  { label:"ADMINISTRATIVO", value: 10, color: '#6CE5E8' },
-  { label:"SEM SETOR", value: 252, color: '#704E85' },
-  { label:"SUPORTE", value: 15, color: '#31356E' },
+  { label: "MARKETING", value: 300, color: '#2F5F98' },
+  { label: "COMERCIAL", value: 500, color: '#2D8BBA' },
+  { label: "FINANCEIRO", value: 200, color: '#41B8D5' },
+  { label: "ADMINISTRATIVO", value: 10, color: '#6CE5E8' },
+  { label: "SEM SETOR", value: 252, color: '#704E85' },
+  { label: "SUPORTE", value: 15, color: '#31356E' },
 ];
 
 const chartData2 = [
-  ["MARKETING", 300 ],
+  ["MARKETING", 300],
   ["COMERCIAL", 500],
-  ["FINANCEIRO", 100 ],
-  ["ADMINISTRATIVO", 150 ],
-  ["SEM SETOR", 20 ],
-  ["SUPORTE", 200 ],
+  ["FINANCEIRO", 100],
+  ["ADMINISTRATIVO", 150],
+  ["SEM SETOR", 20],
+  ["SUPORTE", 200],
 ];
 
 const data = {
@@ -103,38 +103,52 @@ const dataLineNivo = [
         "x": "07/2023",
         "y": 15
       },
+      {
+        "x": "08/2023",
+        "y": 15
+      },
+      {
+        "x": "09/2023",
+        "y": 16
+      },
+      {
+        "x": "10/2023",
+        "y": 13
+      },
+      {
+        "x": "11/2023",
+        "y": 14
+      },
+      {
+        "x": "12/2023",
+        "y": 15
+      },
     ]
   },
 ];
 
 function App() {
   return (
-    <Box sx={{ minWidth:'600px',display: 'flex', flexDirection: 'row', flexWrap: 'wrap', wordWrap: 'normal' }}>
-      <Box sx={{display:'flex',  minWidth:'400px', width:'100%', flexWrap: 'wrap', wordWrap: 'normal' }}>
-        <Box sx={{minWidth:'400px', width:'50%'}}>
-          <DonutChartNivo dados={dataNivo} />
-        </Box>
-        <Box sx={{minWidth:'400px',width:'50%'}}>
-          <LineChartNivo dados={dataLineNivo} />
-        </Box>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', wordWrap: 'normal', justifyContent: 'space-between' }}>
+      <Box sx={{ flexBasis: '100%', minWidth: '600px', maxWidth: '950px' }}>
+        <DonutChartNivo dados={dataNivo} />
+      </Box>
+      <Box sx={{ flexBasis: '100%', minWidth: '600px', maxWidth: '950px' }}>
+        <LineChartNivo dados={dataLineNivo} />
       </Box>
 
-      <Box sx={{display:'flex',  minWidth:'400px', width:'100%', flexWrap: 'wrap', wordWrap: 'normal' }}>
-        <Box sx={{minWidth:'400px', width:'50%'}}>
-          <DonutChart data={chartData} />
-        </Box>
-        <Box sx={{minWidth:'400px',width:'50%'}}>
-          <DonutChartGoogle dados={chartData2} />
-        </Box>
+      <Box sx={{ flexBasis: '100%', minWidth: '600px', maxWidth: '950px' }}>
+        <DonutChart data={chartData} />
+      </Box>
+      <Box sx={{ flexBasis: '100%', minWidth: '600px', maxWidth: '950px' }}>
+        <DonutChartGoogle dados={chartData2} />
       </Box>
 
-      <Box sx={{display:'flex', minWidth:'400px', width:'100%',  flexWrap: 'wrap', wordWrap: 'normal' }}>
-        <Box sx={{minWidth:'400px',width:'50%'}}>
-          <DonutApexChart data={data} />
-        </Box>
-        <Box sx={{minWidth:'400px',width:'50%'}}>
-          <DonutLibChart dados={chartData} />
-        </Box>
+      <Box sx={{ flexBasis: '100%', minWidth: '600px', maxWidth: '950px' }}>
+        <DonutApexChart data={data} />
+      </Box>
+      <Box sx={{ flexBasis: '100%', minWidth: '600px', maxWidth: '950px' }}>
+        <DonutLibChart dados={chartData} />
       </Box>
     </Box>
   );
