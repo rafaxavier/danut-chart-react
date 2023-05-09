@@ -10,7 +10,7 @@ const DonutChartNivo: React.FC<DonutChartNivoProps> = ({ dados }) => {
 
   return (
     <Box  m={2} p={2} sx={{border:'1px solid black', height:'350px', minWidth:'500px'}}>
-      {/* <ResponsivePie
+      <ResponsivePie
         data={dados}
         margin={{ top: 100, right: 100, bottom: 100, left: 100 }}
         valueFormat=" >-"
@@ -31,7 +31,7 @@ const DonutChartNivo: React.FC<DonutChartNivoProps> = ({ dados }) => {
         enableArcLinkLabels={false}
         arcLabel={e=>e.id+" ("+e.value+")"}
         arcLabelsRadiusOffset={2.4} // distancia das infos p/ o grafico
-        arcLabelsSkipAngle={5} // Ignorea a info se o angulo do arco for menor que o valor fornecido
+        arcLabelsSkipAngle={17} // Ignora a info se o angulo do arco for menor que o valor fornecido
         arcLabelsTextColor={{
             from: 'color',
             modifiers: [
@@ -56,8 +56,8 @@ const DonutChartNivo: React.FC<DonutChartNivoProps> = ({ dados }) => {
                 itemDirection: 'right-to-left'
             }
         ]}
-    /> */}
-      <ResponsivePie
+    />
+      {/* <ResponsivePie
         data={dados}
         margin={{ top: 100, right: 100, bottom: 100, left: 100 }}
         valueFormat=" >-"
@@ -110,7 +110,7 @@ const DonutChartNivo: React.FC<DonutChartNivoProps> = ({ dados }) => {
                 itemDirection: 'right-to-left'
             }
         ]}
-    />
+    /> */}
     </Box>
     
   );

@@ -35,7 +35,7 @@ const dataNivo = [
   {
     "id": "MARKETING",
     "label": "MARKETING",
-    "value": 2,
+    "value": 85,
     "color": "hsl(137, 70%, 50%)"
   },
   {
@@ -66,7 +66,7 @@ const dataNivo = [
     "id": "SUPORTE",
     "label": "SUPORTE",
     "value": 335,
-    "color": "hsl(255, 70%, 50%)"
+    "color": "hsl(156, 70%, 50%)"
   }
 ];
 
